@@ -1,5 +1,12 @@
+import java.util.Scanner;
+import com.taskManager.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        TaskManager taskManager = new TaskManager();
+        taskManager.printMenu();
+        var input = scanner.nextInt();
+        taskManager.processMenuInput(input);
     }
 }
